@@ -1,7 +1,10 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\XdebugController;
 use Illuminate\Support\Facades\Route;
+
+Route::get('xdebug', [XDebugController::class, 'xdebug']);
 
 Route::get('/', function () {
     return view('welcome');
