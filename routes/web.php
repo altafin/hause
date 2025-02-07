@@ -6,7 +6,7 @@ use App\Http\Controllers\XdebugController;
 use App\Http\Controllers\Person\PersonController;
 use Illuminate\Support\Facades\Route;
 
-route::get('person', [PersonController::class, 'index'])->name('person');
+route::get('person', [PersonController::class, 'index'])->name('person.index');
 //route::get('naturalperson/create', [NaturalPersonController::class, 'create'])->name('naturalperson.create');
 
 Route::get('xdebug', [XDebugController::class, 'xdebug']);
