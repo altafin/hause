@@ -15,9 +15,6 @@ class Person extends Model
     use HasFactory, SoftDeletes;
 
     protected $table = 'people';
-    protected $fillable = [
-        'name',
-    ];
 
     public function user(): BelongsTo
     {
