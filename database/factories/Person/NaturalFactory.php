@@ -2,6 +2,7 @@
 
 namespace Database\Factories\Person;
 
+use App\Models\Person\Type;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use App\Models\User;
 
@@ -20,7 +21,7 @@ class NaturalFactory extends Factory
         $user = User::find(1);
         return [
             'name' => fake()->name(),
-            'type_id' => 1,
+            'type_id' => 1, //Type::all()->random()->id,
             'user_id' => $user->id,
         ];
     }

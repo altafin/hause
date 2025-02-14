@@ -31,4 +31,9 @@ class Person extends Model
         return $this->hasMany(Category::class);
     }
 
+    public function documents(): HasMany
+    {
+        return $this->hasMany(Document::class);
+    }
+
 }

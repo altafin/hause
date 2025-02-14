@@ -18,6 +18,16 @@ class DocumentTypeSeeder extends Seeder
                 'name' => 'CPF',
                 'system' => true,
             ),
+            array(
+                'id' => 2,
+                'name' => 'CNPJ',
+                'system' => true,
+            ),
+            array(
+                'id' => 3,
+                'name' => 'RG',
+                'system' => true,
+            ),
         );
         foreach ($arrTypes as $types) {
             DocumentType::factory()->create($types);
