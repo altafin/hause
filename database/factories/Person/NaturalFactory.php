@@ -3,11 +3,12 @@
 namespace Database\Factories\Person;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\User;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Person\NaturalPerson>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Person\Natural>
  */
-class NaturalPersonFactory extends Factory
+class NaturalFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -16,10 +17,11 @@ class NaturalPersonFactory extends Factory
      */
     public function definition(): array
     {
+        $user = User::find(1);
         return [
             'name' => fake()->name(),
-            'cpf' => fake()->cpf(),
-            'birthday' => fake()->dateTimeBetween('-70 years', '-18 years'),
+            'type_id' => 1,
+            'user_id' => $user->id,
         ];
     }
 }

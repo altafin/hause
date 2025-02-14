@@ -23,7 +23,7 @@ class Person extends Model
 
     public function type(): BelongsTo
     {
-        return $this->belongsTo(PersonType::class);
+        return $this->belongsTo(Type::class);
     }
 
     public function categories(): HasMany

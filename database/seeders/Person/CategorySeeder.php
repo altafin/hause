@@ -1,11 +1,10 @@
 <?php
 
-namespace Database\Seeders;
+namespace Database\Seeders\Person;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class PersonSeeder extends Seeder
+class CategorySeeder extends Seeder
 {
     /**
      * Run the database seeds.

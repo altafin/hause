@@ -7,9 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class PersonType extends Model
+class Type extends Model
 {
-    /** @use HasFactory<\Database\Factories\Person\PersonTypeFactory> */
+    /** @use HasFactory<\Database\Factories\Person\TypeFactory> */
     use HasFactory, SoftDeletes;
 
     protected $table = 'people_types';

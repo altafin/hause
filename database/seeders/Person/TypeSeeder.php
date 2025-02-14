@@ -1,12 +1,11 @@
 <?php
 
-namespace Database\Seeders;
+namespace Database\Seeders\Person;
 
-use App\Models\Person\PersonType;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Person\Type;
 use Illuminate\Database\Seeder;
 
-class PersonTypeSeeder extends Seeder
+class TypeSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -26,7 +25,7 @@ class PersonTypeSeeder extends Seeder
             ),
         );
         foreach ($arrTypes as $types) {
-            PersonType::factory()->create($types);
+            Type::factory()->create($types);
         }
 
     }

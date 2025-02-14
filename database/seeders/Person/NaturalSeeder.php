@@ -2,18 +2,18 @@
 
 namespace Database\Seeders\Person;
 
-use App\Models\Person\NaturalPerson;
+use App\Models\Person\Natural;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class NaturalPersonSeeder extends Seeder
+class NaturalSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        NaturalPerson::factory()
+        Natural::factory()
             ->count(10)
             ->create();
     }

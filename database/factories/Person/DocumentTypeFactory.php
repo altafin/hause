@@ -5,9 +5,9 @@ namespace Database\Factories\Person;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Person\Person>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Person\DocumentType>
  */
-class PersonFactory extends Factory
+class DocumentTypeFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,7 +17,7 @@ class PersonFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'name' => fake()->firstName,
         ];
     }
 }
