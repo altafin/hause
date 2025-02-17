@@ -17,7 +17,7 @@ class RgFactory extends Factory
     public function definition(): array
     {
         return [
-            'document_type_id' => 2,
+            'document_type_id' => 3,
             'value' => fake()->rg(false),
         ];
     }
