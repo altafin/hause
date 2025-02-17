@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class DocumentType extends Model
 {
-    /** @use HasFactory<\Database\Factories\Person\DocumentTypeFactory> */
+    /** @use HasFactory<\Database\Factories\Document\DocumentTypeFactory> */
     use HasFactory;
 
     protected $table = 'people_document_types';

@@ -9,10 +9,8 @@ class PersonController extends Controller
 {
     public function index()
     {
-        $natural = Natural::with(['documents'])->find(2);
-        $document1 = $natural->documents[0];
-        $document1->load('type');
-        dd($document1);
+        $natural = Natural::with(['documents', 'documents.type'])->find(2);
+        dd($natural);
 
         return view('person.index');
     }
