@@ -2,6 +2,7 @@
 
 namespace App\Models\Person;
 
+use App\Models\Document\Document;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -28,12 +29,12 @@ class Person extends Model
 
     public function categories(): HasMany
     {
-        return $this->hasMany(Category::class);
+        return $this->hasMany(Category::class, 'person_id');
     }
 
     public function documents(): HasMany
     {
-        return $this->hasMany(Document::class);
+        return $this->hasMany(Document::class, 'person_id');
     }
 
 }

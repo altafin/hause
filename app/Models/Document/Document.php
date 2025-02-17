@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Models\Person;
+namespace App\Models\Document;
 
+use App\Models\Person\Person;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -20,6 +21,11 @@ class Document extends Model
     public function person(): BelongsTo
     {
         return $this->belongsTo(Person::class);
+    }
+
+    public function type(): BelongsTo
+    {
+        return $this->belongsTo(DocumentType::class);
     }
 
 }

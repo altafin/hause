@@ -2,7 +2,7 @@
 
 namespace Database\Seeders\Person;
 
-use App\Models\Person\DocumentType;
+use App\Models\Document\DocumentType;
 use Illuminate\Database\Seeder;
 
 class DocumentTypeSeeder extends Seeder

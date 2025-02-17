@@ -1,13 +1,13 @@
 <?php
 
-namespace Database\Factories\Person;
+namespace Database\Factories\Document;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Document\DocumentType>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Model>
  */
-class DocumentTypeFactory extends Factory
+class CpfFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,7 +17,8 @@ class DocumentTypeFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => fake()->firstName,
+            'document_type_id' => 1,
+            'value' => fake()->cpf(false),
         ];
     }
 }
