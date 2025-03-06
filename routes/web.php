@@ -1,10 +1,14 @@
 <?php
 
+use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\XdebugController;
 //use App\Http\Controllers\Person\NaturalPersonController;
 use App\Http\Controllers\Person\PersonController;
 use Illuminate\Support\Facades\Route;
+
+
+route::resource('/customer', CustomerController::class);
 
 route::get('person', [PersonController::class, 'index'])->name('person.index');
 route::post('person', [PersonController::class, 'store'])->name('person.store');
